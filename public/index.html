@@ -1,0 +1,38 @@
+<html>
+<head>
+  <div class="header">
+    <h1>Store Demo</h1>
+  </div>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/cart.css">
+</head>
+
+<body>
+  <div>
+    <p class="summary">Summary</p>
+    <div class="order-items" id='order-items'></div> 
+    
+    <div class="pay-summary" id="pay-summary"> 
+      <div>
+        <p>Subtotal</p>
+        <p id="subtotal">$300</p>
+      </div>
+      <div>
+        <p>Discounts</p>
+        <p id="discount">$300</p>
+      </div>
+      <div>
+        <p>Shipping</p>
+        <p id="shipping">$300</p>
+      </div>
+      <div class="total">
+        <p>Total</p>
+        <p id="total">$300</p>
+      </div>
+    </div>
+    <div class="pay-container">
+      <button class="pay-button">Pay With BeemIt</button>
+    </div>
+  </div>
+  <script src="javascript/cart.js"></script>
+</body>
+</html>
