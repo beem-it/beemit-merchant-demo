@@ -1,5 +1,6 @@
 const app = require('./app');
+const config = require('./config');
 
-app.listen(8081, () => {
-  console.log('Listening to port 8081');
+app.listen(config.PORT, () => {
+  console.log('BeemIt Store Started on port 8081');
 });

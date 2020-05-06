@@ -7,14 +7,17 @@
   "license": "MIT",
   "dependencies": {
     "@material/list": "^6.0.0",
+    "axios": "^0.19.2",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "dotenv": "^8.2.0",
     "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-router": "^8.0.8",
     "koa-static": "^5.0.0",
-    "koa-views": "^6.2.1"
+    "koa-views": "^6.2.1",
+    "qs": "^6.9.4"
   },
   "devDependencies": {
     "husky": "^4.2.5",

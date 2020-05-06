@@ -126,15 +126,15 @@ class Cart {
     // Generate SKU line items
     let items = [];
   
-    for(let item in cart.items) {
+    cart.items.forEach(item => {
       let lineItem = {
         type: 'sku',
-        amount: item.quantity * item.amount,
+        amount: (item.quantity * item.amount),
         description: item.name,
         quantity: item.quantity
       }
-      items.push(lineItem)
-    }
+      items.push(lineItem);
+    })
 
     // Generate Discount Line Item
     const discount = {

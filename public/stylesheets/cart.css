@@ -99,6 +99,8 @@
   text-decoration: none;
   font-size: 16px;
   border-radius: 15px;
+  border: none;
+  outline: none;
 }
 
 .pay-summary {
@@ -118,4 +120,31 @@
   padding-top: 15px;
   font-size: 24px;
   border-top: 1px solid #f3f3ff;
+}
+
+.qr-code-container {
+  display: flex;
+  padding: 15px 40px 15px 40px;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto;
+  width: 400px;
+  border: 4px solid #f3f3ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.qr-code-container .qrimage {
+  width: 100px;
+  height: 100px;
+}
+
+.qr-code-container .message {
+  margin-left: 15px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
