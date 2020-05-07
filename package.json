@@ -4,5 +4,22 @@
   "main": "index.js",
   "repository": "git@github.com:beem-it/beemit-merchant-demo.git",
   "author": "Beem It",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,html,js,json,md,yaml,yml}": [
+      "prettier --write"
+    ]
+  }
 }
