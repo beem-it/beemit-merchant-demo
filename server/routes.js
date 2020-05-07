@@ -31,7 +31,6 @@ router.post('/orders', async (ctx) =>  {
   try {
     const authenticatedClient = await client();
     const response = await authenticatedClient.post('/v1/orders', ctx.request.body);
-    console.log(JSON.stringify(response.data));
     ctx.status = 200;
     ctx.body = response.data;
   } catch(error) {

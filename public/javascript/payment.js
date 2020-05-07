@@ -13,7 +13,6 @@
   payButton.addEventListener('click', async () => {
     payButton.innerText = "Processing..";
     try {
-      console.log(JSON.stringify(window.cart.lineItems, null, 2));
       const cart = window.cart; 
       
       const orderRequestBody = {
@@ -32,7 +31,7 @@
 
       payContainer.classList.add("hidden");
       qrContainer.classList.remove("hidden");
-      console.log(`APP URL: ${order.app_url}`)
+
       new QRCode("qr", {
         text: order.app_url,
         width: 100,
@@ -71,7 +70,7 @@
         interval,
         start);
     } else {
-      console.log('Pooling Timed Out');
+      console.log('Polling Timed Out');
       handleOrderPaymentStatus(orderStatus)
     }
 
@@ -82,12 +81,11 @@
     if (orderStatus.status=== 'PAID') {
       //Show receipt
       success.classList.remove('hidden');
-      console.log('showing receipt');
     } else { 
       // Show error UI
       error.classList.remove('hidden');
-      console.log('showing error');
     }
   }
 
 })()
+ 

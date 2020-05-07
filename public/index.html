@@ -5,29 +5,27 @@
   </div>
   <link rel="stylesheet" type="text/css" href="/stylesheets/cart.css">
 </head>
-
 <body>
   <div>
     <div id="cart">
       <p class="summary">Summary</p>
       <div class="order-items" id='order-items'></div> 
-      
       <div class="pay-summary" id="pay-summary"> 
         <div>
           <p>Subtotal</p>
-          <p id="subtotal">$300</p>
+          <p id="subtotal"></p>
         </div>
         <div>
           <p>Discounts</p>
-          <p id="discount">$300</p>
+          <p id="discount"></p>
         </div>
         <div>
           <p>Shipping</p>
-          <p id="shipping">$300</p>
+          <p id="shipping"></p>
         </div>
         <div class="total">
           <p>Total</p>
-          <p id="total">$300</p>
+          <p id="total"></p>
         </div>
       </div>
       <div id="pay-container" class="pay-container">
@@ -46,7 +44,6 @@
         <h1 class="item">Thanks for your order.</h1>
         <p class="item">We will send out a receipt to your registered email soon</p>
       </div>
-
       <div id="error" class="status hidden">
         <h1 class="item"> Your payment failed</h1>
         <p class="item">We did not receive your payment. Please try again</p>
@@ -55,7 +52,7 @@
    </div>
   </div>
   <script src="javascript/cart.js"></script>
-  <script src="javascript/pay_order.js"></script>
+  <script src="javascript/payment.js"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 </body>
 </html>

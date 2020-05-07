@@ -31,10 +31,8 @@ class Cart {
   populateCart() {
     this.cart = this.generateCartItems();
     this.lineItems = this.generateLineItems(this.cart);
-
     
     const orderItems = document.getElementById('order-items');
-    console.log(JSON.stringify(this.cartItems, null, 2));
     
     this.cart.items.forEach(value => {
       const formattedAmount = this.formatAmount(value.amount);
@@ -73,8 +71,6 @@ class Cart {
     total.innerText = `${this.formatAmount(cart.total)}`
   }
 
-  
-
   generateCartItems() {
     const randomNumber = (min, max) => {
       min = Math.floor(min);
@@ -109,8 +105,7 @@ class Cart {
     const subtotal = items.reduce((acc, current) => {
       return acc + (current.amount * current.quantity)
     }, 0);
-    console.log(`Sub: ${subtotal}, ship: ${shippingCost}, discount: ${discount}`);
-
+    
     const total = subtotal + shippingCost - discount;
 
     return {

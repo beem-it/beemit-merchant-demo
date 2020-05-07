@@ -15,5 +15,4 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-//export default app;
 module.exports = app
