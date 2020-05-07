@@ -4,10 +4,10 @@ const https = require('https');
 
 class AuthTokenHelper {
   /**
-   * 
+   *
    * @param {Object} options - AuthTokenHelper options
-   * @param {string} options.client_id - client id
-   * @param {string} options.client_secret - client secret
+   * @param {string} options.clientId - client id
+   * @param {string} options.clientSecret - client secret
    * @param {string} options.token - reference token
    */
 
@@ -15,10 +15,10 @@ class AuthTokenHelper {
     this.options = options;
     this.accessToken = null;
     this.client = axios.create({
-      httpsAgent: new https.Agent({  
-        rejectUnauthorized: false
-      })
-    })
+      httpsAgent: new https.Agent({
+        rejectUnauthorized: false,
+      }),
+    });
   }
 
   async getAccessToken() {
@@ -29,7 +29,8 @@ class AuthTokenHelper {
           client_id: this.options.clientId,
           client_secret: this.options.clientSecret,
           token: this.options.token,
-          scope: 'openid merchant.orders.get merchant.orders.create merchant.orders.cancel',
+          scope:
+            'openid merchant.orders.get merchant.orders.create merchant.orders.cancel',
         };
 
         const { data } = await this.client.post(
@@ -37,7 +38,7 @@ class AuthTokenHelper {
           qs.stringify(tokenRequestBody),
           {
             headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
+              'Content-Type': 'application/x-www-form-urlencoded',
             },
           }
         );
@@ -55,6 +56,6 @@ class AuthTokenHelper {
       this.accessToken = null;
     }, interval);
   }
-};
+}
 
 module.exports = AuthTokenHelper;

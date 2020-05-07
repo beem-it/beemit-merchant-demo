@@ -9,7 +9,6 @@
     "start": "node server/index.js"
   },
   "dependencies": {
-    "@material/list": "^6.0.0",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "koa": "^2.11.0",
@@ -31,7 +30,7 @@
   },
   "lint-staged": {
     "*.{css,html,js,json,md,yaml,yml}": [
-        "prettier --write"
-      ]
+      "prettier --write"
+    ]
   }
 }

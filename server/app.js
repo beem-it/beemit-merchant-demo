@@ -10,9 +10,7 @@ const app = new Koa();
 
 app.use(bodyParser());
 app.use(serve(path.join(__dirname, '../public')));
-app.use(views(path.join(__dirname, '../public'), { extension: 'html'}));
-app
-  .use(router.routes())
-  .use(router.allowedMethods());
+app.use(views(path.join(__dirname, '../public'), { extension: 'html' }));
+app.use(router.routes()).use(router.allowedMethods());
 
-module.exports = app
+module.exports = app;
