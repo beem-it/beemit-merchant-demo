@@ -5,12 +5,12 @@
   "repository": "git@github.com:beem-it/beemit-merchant-demo.git",
   "author": "Beem It",
   "license": "MIT",
+  "scripts": {
+    "start": "node server/index.js"
+  },
   "dependencies": {
     "@material/list": "^6.0.0",
     "axios": "^0.19.2",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
     "dotenv": "^8.2.0",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",

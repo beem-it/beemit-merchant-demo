@@ -14,11 +14,11 @@ const authTokenHelper = new AuthTokenHelper({
 });
 
 const client = async () => {
-  const bearerToken = `Bearer ${await authTokenHelper.getAccessToken()}`;
+  const token = await authTokenHelper.getAccessToken();
   return axios.create({
     baseURL: config.MERCHANT_API_URL,
     headers: {
-      authorization: bearerToken
+      authorization: `Bearer ${token}`
     }
   });
 }

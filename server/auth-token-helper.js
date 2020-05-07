@@ -21,11 +21,8 @@ class AuthTokenHelper {
           client_id: this.options.clientId,
           client_secret: this.options.clientSecret,
           token: this.options.token,
+          scope: 'openid merchant.orders.get merchant.orders.create merchant.orders.cancel',
         };
-
-        if (this.options.scope) {
-          tokenRequestBody.scope = this.options.scope;
-        }
 
         const { data } = await this.client.post(
           this.options.tokenUrl,
