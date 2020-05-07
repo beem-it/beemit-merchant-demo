@@ -3,6 +3,14 @@ const axios = require('axios');
 const https = require('https');
 
 class AuthTokenHelper {
+  /**
+   * 
+   * @param {Object} options - AuthTokenHelper options
+   * @param {string} options.client_id - client id
+   * @param {string} options.client_secret - client secret
+   * @param {string} options.token - reference token
+   */
+
   constructor(options) {
     this.options = options;
     this.accessToken = null;
