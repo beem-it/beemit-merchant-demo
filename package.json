@@ -5,8 +5,19 @@
   "repository": "git@github.com:beem-it/beemit-merchant-demo.git",
   "author": "Beem It",
   "license": "MIT",
-  "scripts": {},
-  "dependencies": {},
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.1",
+    "qs": "^6.9.4"
+  },
   "devDependencies": {
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
