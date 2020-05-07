@@ -5,10 +5,10 @@ This repository contains an example commerce site and demostrates how to integra
 ## Setup
 
 - Install dependancies
-
-      ```
-      yarn install
-      ```
+      
+  ```
+  yarn install
+  ```
 
 - Copy the .env.example file
 
@@ -20,9 +20,9 @@ This repository contains an example commerce site and demostrates how to integra
 
 - Run the local server
 
-      ```
-      node server/index.js
-      ```
+  ```
+  node server/index.js
+  ```
 
 - The demo website should now be running on `localhost:8081` (default port in .env)
 
