@@ -8,37 +8,51 @@
 
 <body>
   <div>
-    <p class="summary">Summary</p>
-    <div class="order-items" id='order-items'></div> 
-    
-    <div class="pay-summary" id="pay-summary"> 
-      <div>
-        <p>Subtotal</p>
-        <p id="subtotal">$300</p>
+    <div id="cart">
+      <p class="summary">Summary</p>
+      <div class="order-items" id='order-items'></div> 
+      
+      <div class="pay-summary" id="pay-summary"> 
+        <div>
+          <p>Subtotal</p>
+          <p id="subtotal">$300</p>
+        </div>
+        <div>
+          <p>Discounts</p>
+          <p id="discount">$300</p>
+        </div>
+        <div>
+          <p>Shipping</p>
+          <p id="shipping">$300</p>
+        </div>
+        <div class="total">
+          <p>Total</p>
+          <p id="total">$300</p>
+        </div>
       </div>
-      <div>
-        <p>Discounts</p>
-        <p id="discount">$300</p>
+      <div id="pay-container" class="pay-container">
+        <button class="action-button" id='pay-button'>Pay With BeemIt</button>
       </div>
-      <div>
-        <p>Shipping</p>
-        <p id="shipping">$300</p>
+      <div id='qr-code' class="qr-code-container hidden">
+        <div id='qr' class="qrimage"></div>
+        <div class="message">
+          <p> Pay instantly with Beem It</p>
+          <p> Please scan the QR code with your Beem It app</p>
+        </div>
       </div>
-      <div class="total">
-        <p>Total</p>
-        <p id="total">$300</p>
+   </div>
+   <div id="paymentStatus">
+      <div id = "success" class="status hidden">
+        <h1 class="item">Thanks for your order.</h1>
+        <p class="item">We will send out a receipt to your registered email soon</p>
       </div>
-    </div>
-    <div id="pay-container" class="pay-container">
-      <button class="pay-button" id='pay-button'>Pay With BeemIt</button>
-    </div>
-    <div id='qr-code' class="qr-code-container hidden">
-      <div id='qr' class="qrimage"></div>
-      <div class="message">
-        <p> Pay instantly with Beem It</p>
-        <p> Please scan the QR code with your Beem It app</p>
+
+      <div id="error" class="status hidden">
+        <h1 class="item"> Your payment failed</h1>
+        <p class="item">We did not receive your payment. Please try again</p>
+        <button id="try-again" class="item action-button">Try Again</button>
       </div>
-    </div>
+   </div>
   </div>
   <script src="javascript/cart.js"></script>
   <script src="javascript/pay_order.js"></script>

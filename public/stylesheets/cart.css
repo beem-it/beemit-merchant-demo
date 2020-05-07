@@ -90,7 +90,7 @@
   margin: 15px auto;
 }
 
-.pay-button {
+.action-button {
   background-color: #FF2369;
   border: none;
   color: white;
@@ -147,4 +147,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+#paymentStatus {
+  display: flex;
+}
+
+#paymentStatus .status {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 100px auto;
+  justify-content: space-between;
+}
+
+#paymentStatus .status .item {
+  padding: 10px;
+}
+
+#paymentStatus .status.hidden {
+  display: none;
 }

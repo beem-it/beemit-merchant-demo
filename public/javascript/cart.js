@@ -92,7 +92,7 @@ class Cart {
         id: 'uuid',
         image: product.image,
         name: product.name,
-        amount: randomNumber(1000, 5000),
+        amount: randomNumber(100, 500),
         description: product.description,
         quantity: randomNumber(1,5)
       }
