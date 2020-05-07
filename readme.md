@@ -2,7 +2,7 @@
 
 This repository contains an example commerce site and demostrates how to integrate BeemIt payments in a web checkout flow.
 
-##Setup
+## Setup
 
 - Install dependancies
 
