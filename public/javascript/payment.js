@@ -2,11 +2,14 @@
   const payContainer = document.getElementById('pay-container');
   const payButton = document.getElementById('pay-button');
   const qrContainer = document.getElementById('qr-code');
-  const qr = document.getElementById('qr');
   const success = document.getElementById('success');
-  const failure = document.getElementById('failure');
+  const error = document.getElementById('error');
   const cart = document.getElementById('cart');
   const tryAgainButton = document.getElementById('try-again');
+  const payDeeplinkButton = document.getElementById('pay-deeplink-button');
+  const payDeeplinkContainer = document.getElementById(
+    'pay-deeplink-container'
+  );
 
   let orderId = null;
 
@@ -32,11 +35,20 @@
       payContainer.classList.add('hidden');
       qrContainer.classList.remove('hidden');
 
-      new QRCode('qr', {
-        text: order.app_url,
-        width: 100,
-        height: 100,
-      });
+      if (getComputedStyle(qrContainer, null).display !== 'none') {
+        // Show QR code on desktop for user to scan the code and pay.
+        new QRCode('qr', {
+          text: order.app_url,
+          width: 100,
+          height: 100,
+        });
+      } else {
+        payDeeplinkContainer.classList.remove('hidden');
+        // Show deeplink button on the phone to redirect to app
+        payDeeplinkButton.onclick = () => {
+          window.open(order.app_url, '_blank');
+        };
+      }
 
       pollPaymentStatus(orderId);
     } catch (error) {
