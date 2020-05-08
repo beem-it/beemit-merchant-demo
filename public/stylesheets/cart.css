@@ -7,9 +7,11 @@
 
 .header {
   padding: 2px;
-  text-align: center;
   color: #ff2369;
   font-size: 18px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
   border-bottom: 1px solid #f3f3ff;
 }
 
@@ -17,6 +19,12 @@
   font-size: 18px;
   text-align: center;
   padding: 15px;
+}
+
+#order-items {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 #order-items p {
@@ -82,7 +90,7 @@
   background-color: white;
   font-size: 16px;
 }
-
+.pay-deeplink-container,
 .pay-container {
   display: flex;
   width: 460px;
@@ -104,6 +112,8 @@
 }
 
 .pay-summary {
+  display: flex;
+  flex-direction: column;
   width: 400px;
   margin: 10px auto;
 }
@@ -167,4 +177,24 @@
 
 #paymentStatus .status.hidden {
   display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .order-item {
+    padding: 30px 10px 30px 10px;
+  }
+
+  .order-items {
+    width: 100vw;
+  }
+
+  .pay-deeplink-container,
+  .pay-container {
+    width: 100vw;
+    padding: 0;
+  }
+
+  .qr-code-container {
+    display: none;
+  }
 }
