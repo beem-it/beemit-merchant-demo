@@ -61,7 +61,7 @@ If using Mobile
 
 
 
-#### Anyhting to help us investigate further 
+#### Anything to help us investigate further 
 
 ##### Screenshots 
 
